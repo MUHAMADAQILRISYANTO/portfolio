@@ -1,0 +1,36 @@
+/* Global styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #111;
+}
+
+
+/* Game container */
+
+#game-container {
+    text-align: center;
+}
+
+
+/* Canvas styling */
+
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+
+/* Score section */
+
+#score {
+    margin-top: 20px;
+    font-size: 20px;
+}

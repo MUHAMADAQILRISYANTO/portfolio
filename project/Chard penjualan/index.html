@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Penjualan</title>
+    <link rel="stylesheet" href="dash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#" onclick="showPage('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="showPage('penjualan')">Penjualan</a></li>
+                <li><a href="#" onclick="showPage('produk')">Produk</a></li>
+                <li><a href="#" onclick="showPage('laporan')">Laporan</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+
+            <!-- Dashboard Page -->
+            <section id="dashboard" class="page active">
+                <header>
+                    <h1>Dashboard Penjualan</h1>
+                </header>
+
+                <!-- Insight Section -->
+                <section class="insight-section">
+                    <div class="insight-box">
+                        <h3>Total Penjualan</h3>
+                        <p id="totalPenjualan">Rp. 0</p>
+                    </div>
+                    <div class="insight-box">
+                        <h3>Rata-rata Penjualan</h3>
+                        <p id="rataRataPenjualan">Rp. 0</p>
+                    </div>
+                    <div class="insight-box">
+                        <h3>Penjualan Tertinggi</h3>
+                        <p id="penjualanTertinggi">0 produk</p>
+                    </div>
+                </section>
+
+                <!-- Chart Section -->
+                <div class="chart-container">
+                    <canvas id="penjualanChart"></canvas>
+                </div>
+
+                <!-- Chart Stok Produk -->
+                <div class="chart-container">
+                    <canvas id="stokProdukChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Penjualan Page -->
+            <section id="penjualan" class="page">
+                <header>
+                    <h1>Daftar Penjualan</h1>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Penjualan</th>
+                            <th>Produk</th>
+                            <th>Jumlah</th>
+                            <th>Tanggal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Produk A</td>
+                            <td>10</td>
+                            <td>01/10/2024</td>
+                        </tr>
+                        <!-- Tambahkan data lain sesuai kebutuhan -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Produk Page -->
+            <section id="produk" class="page">
+                <header>
+                    <h1>Daftar Produk</h1>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Produk</th>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Produk A</td>
+                            <td>Rp. 100.000</td>
+                            <td>50</td>
+                        </tr>
+                        <!-- Tambahkan data lain sesuai kebutuhan -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Laporan Page -->
+            <section id="laporan" class="page">
+                <header>
+                    <h1>Laporan Penjualan</h1>
+                </header>
+                <p>Laporan bulanan penjualan dari Januari hingga Desember 2024. Silakan unduh laporan untuk detail lebih lanjut.</p>
+                <button onclick="downloadLaporan()">Unduh Laporan</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="dash.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: paleturquoise;
+}
+
+
+/* Sidebar Styling */
+
+.dashboard-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    color: #228ba5fd;
+}
+
+
+/* Main Content Styling */
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* Responsive Sidebar */
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .menu-toggle {
+        display: block;
+        margin: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+    }
+}
+
+
+/* Sidebar active when open */
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Page Visibility */
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* Table Styling */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+
+/* Insight Section */
+
+.insight-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.insight-box {
+    background-color: #ff0000;
+    color: white;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.insight-box h3 {
+    font-size: 20px;
+}
+
+.insight-box p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Chart Container */
+
+.chart-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+canvas {
+    width: 100%;
+    height: 400px;
+}
+
+
+/* Button Styling */
+
+button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c86ee;
+}
